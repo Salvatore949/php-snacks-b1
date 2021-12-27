@@ -45,4 +45,20 @@
                 ]
             ],
         ];
+        $dates = array_keys($posts);
+        for($x=0;$x<count($dates);$x++){
+
+            $date = $dates[$x];
+            echo "<h2>" . $date . "</h2>";
+            
+            $subPosts = $posts[$date];
+              for($y=0;$y<count($subPosts);$y++){
+                  $post = $subPosts[$y];
+
+                  echo "<h4>" . $post["title"] . "</h4>"
+                      . $post["text"] . "<br>"
+                      . $post["author"] . "<br><br>";
+            }
+        }
     ?>
+    
